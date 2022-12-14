@@ -1,0 +1,89 @@
+
+                    >
+                        <>
+                            
+
+<div style="background-image: url(Images/bg_heading_thongbao.png)">
+    <table width="1000px">
+        >
+            < height="20px" style="padding-left: 50px" valign="bottom" align="right">
+                
+
+
+
+<script language="javascript" type="text/javascript">
+
+    function changeLanguage_click(obj) {
+        EduSoft.Web.UC.Logout.ChangeLanguage(obj, changeLanguage_callback);
+    }
+    function changeLanguage_callback() {
+        var loc = window.location.href;
+        if (loc.endsWith("/")) loc = loc.substr(0, loc.length - 1);
+        if (loc.toLowerCase().indexOf("default.aspx") <= 0)
+            self.location = loc + "/default.aspx?pgtemp=x";
+        else if (loc.toLowerCase().indexOf("?") <= 0)
+            self.location = loc + "?lang=x";
+        else if (loc.endsWith("&lang=x"))
+            self.location = loc.replace("&lang=x", "&lang=y");
+        else if (loc.endsWith("&lang=y"))
+            self.location = loc.replace("&lang=y", "&lang=x");
+        else
+            self.location = loc + "&lang=x";
+    }
+    function selectFont_change() {
+        var selectmenu = document.getElementById("selectFont");
+        var chosenOption = selectmenu.options[selectmenu.selectedIndex];
+        var font = chosenOption.value;
+        EduSoft.Web.UC.Logout.ChangeFont(font, ChangeFont_callback);
+    }
+    function ChangeFont_callback() {
+        //self.location=window.location;
+    }
+
+    function ConfirmChuaLuu(obj) {
+
+        alert(obj);
+        self.location = "default.aspx?page=dkmonhoc";
+    }
+
+    
+
+    function signOutGoogle(dest) {
+        var url = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue='
+            + decodeURIComponent(dest) + 'page=gioithieu';
+        document.location.href = url;
+        
+        //gapi.load('auth2', function () {
+        //    gapi.auth2.init();
+        //    var auth = gapi.auth2.GoogleAuth;
+        //    auth.signOut().then(function () {
+        //        location = decodeURIComponent(dest) + 'page=gioithieu';
+        //    });
+        //});
+    }
+</script>
+
+<div id="ctl00_Header1_Logout1_dLog" class="logout" style="text-align: right; margin-bottom: 0px">
+    
+    <img src="App_Themes/Standard/Images/US.gif" alt="English" onclick="changeLanguage_click('_us')"
+        id="imgUS" title="English" />
+    <img src="App_Themes/Standard/Images/VI.gif" alt="Vietnamese" onclick="changeLanguage_click('_vi')"
+        id="imgVi" title="Vietnamese" />
+    <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"><b><font color="MistyRose">Chào bạn </font></b></span>&nbsp;
+    
+    
+    <a id="ctl00_Header1_Logout1_lbtnLogOut" href="javascript:__doPostBack('ctl00$Header1$Logout1$lbtnLogOut','')" style="font-family: 'Tahoma', Times, serif"><b><font color="MistyRose" size="2">Đăng Nhập</font></b></a>
+    &nbsp;<select id="selectFont" style="font-size: 11px; width: 100px; color: #000080;"
+        onchange="selectFont_change()">
+        <option value="uni">-------Font-------</option>
+        <option value="uni" selected>Font Unicode</option>
+        <option value="abc" >Font ABC</option>
+        <option value="vni" >Font Vni</option>
+        <option value="not" >Text không
+            dấu</option>
+    </select>
+</div>
+
+            </>
+        <>
+    

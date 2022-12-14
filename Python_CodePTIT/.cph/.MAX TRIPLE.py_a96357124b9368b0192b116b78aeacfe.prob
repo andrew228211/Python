@@ -1,0 +1,1 @@
+{"name":"Local: MAX TRIPLE","url":"c:\\Users\\ADMIN\\Documents\\GitHub\\Python\\Hello world\\MAX TRIPLE.py","tests":[{"id":1670948093502,"input":"2\n7\n1 2 3 0 -1 8 10 \n7\n9 8 20 3 4 -1 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ADMIN\\Documents\\GitHub\\Python\\Hello world\\MAX TRIPLE.py","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: Bai2","url":"c:\\Users\\ADMIN\\Documents\\GitHub\\Python\\Build\\ThucHanh3\\Bai2.py","tests":[{"id":1670849337891,"input":"4 4\n1 1 0 1\n2 -1 4 5\n0 0 0 0\n1 0 2 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ADMIN\\Documents\\GitHub\\Python\\Build\\ThucHanh3\\Bai2.py","group":"local","local":true}

@@ -1,0 +1,13 @@
+t=int(input())
+f=[]
+s=input()
+f.append(s)
+t=t-1
+while(t>0):
+    s=input()
+    try:
+        f.index(s)>=0 
+    except:
+        f.append(s)
+    t-=1
+print(len(f))
